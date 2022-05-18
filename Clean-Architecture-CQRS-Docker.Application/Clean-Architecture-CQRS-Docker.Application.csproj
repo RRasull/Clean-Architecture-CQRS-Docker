@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="CQRS\Commands\" />
-    <Folder Include="CQRS\Handlers\" />
     <Folder Include="DTOs\" />
     <Folder Include="Exceptions\" />
     <Folder Include="Implementations\" />
