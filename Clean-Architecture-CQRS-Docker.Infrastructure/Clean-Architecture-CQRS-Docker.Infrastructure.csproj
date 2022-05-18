@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DAL\" />
     <Folder Include="Implementations\" />
     <Folder Include="Configuration\" />
   </ItemGroup>
@@ -22,6 +21,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Clean-Architecture-CQRS-Docker.Domain\Clean-Architecture-CQRS-Docker.Domain.csproj" />
   </ItemGroup>
 
 </Project>
