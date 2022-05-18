@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clean-Architecture-CQRS-Docker", "Clean-Architecture-CQRS-Docker\Clean-Architecture-CQRS-Docker.csproj", "{F8C54A08-80B7-45CB-A8A8-21E9B38548DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C80EDBB0-B508-4521-901F-563C22125BA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clean-Architecture-CQRS-Docker.API", "Clean-Architecture-CQRS-Docker.API\Clean-Architecture-CQRS-Docker.API.csproj", "{F1913182-BA29-455A-9C65-8FD26A6218C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clean-Architecture-CQRS-Docker.Domain", "Clean-Architecture-CQRS-Docker.Domain\Clean-Architecture-CQRS-Docker.Domain.csproj", "{96BBDCB0-1309-4864-8AB9-E2C8D59F3DE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clean-Architecture-CQRS-Docker.Infrastructure", "Clean-Architecture-CQRS-Docker.Infrastructure\Clean-Architecture-CQRS-Docker.Infrastructure.csproj", "{B852B3B8-781E-4686-880D-7BDB1D5BB5DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clean-Architecture-CQRS-Docker.Application", "Clean-Architecture-CQRS-Docker.Application\Clean-Architecture-CQRS-Docker.Application.csproj", "{41A7A894-D9A3-4018-83F8-09F485BC8086}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8C54A08-80B7-45CB-A8A8-21E9B38548DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C54A08-80B7-45CB-A8A8-21E9B38548DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C54A08-80B7-45CB-A8A8-21E9B38548DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C54A08-80B7-45CB-A8A8-21E9B38548DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1913182-BA29-455A-9C65-8FD26A6218C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1913182-BA29-455A-9C65-8FD26A6218C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1913182-BA29-455A-9C65-8FD26A6218C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1913182-BA29-455A-9C65-8FD26A6218C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BBDCB0-1309-4864-8AB9-E2C8D59F3DE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BBDCB0-1309-4864-8AB9-E2C8D59F3DE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BBDCB0-1309-4864-8AB9-E2C8D59F3DE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BBDCB0-1309-4864-8AB9-E2C8D59F3DE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B852B3B8-781E-4686-880D-7BDB1D5BB5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B852B3B8-781E-4686-880D-7BDB1D5BB5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B852B3B8-781E-4686-880D-7BDB1D5BB5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B852B3B8-781E-4686-880D-7BDB1D5BB5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A7A894-D9A3-4018-83F8-09F485BC8086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A7A894-D9A3-4018-83F8-09F485BC8086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A7A894-D9A3-4018-83F8-09F485BC8086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A7A894-D9A3-4018-83F8-09F485BC8086}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1913182-BA29-455A-9C65-8FD26A6218C5} = {C80EDBB0-B508-4521-901F-563C22125BA3}
+		{96BBDCB0-1309-4864-8AB9-E2C8D59F3DE2} = {C80EDBB0-B508-4521-901F-563C22125BA3}
+		{B852B3B8-781E-4686-880D-7BDB1D5BB5DB} = {C80EDBB0-B508-4521-901F-563C22125BA3}
+		{41A7A894-D9A3-4018-83F8-09F485BC8086} = {C80EDBB0-B508-4521-901F-563C22125BA3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {75ECBAA1-A473-426A-8FA8-A3AE4DB9A031}
+	EndGlobalSection
+EndGlobal
