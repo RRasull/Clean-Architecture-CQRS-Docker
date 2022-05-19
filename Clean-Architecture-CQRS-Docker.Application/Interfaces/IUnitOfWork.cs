@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Clean_Architecture_CQRS_Docker.Domain.Interfaces;
 
-namespace Clean_Architecture_CQRS_Docker.Domain
+namespace Clean_Architecture_CQRS_Docker.Application.Interfaces
 {
     public interface IUnitOfWork
     {

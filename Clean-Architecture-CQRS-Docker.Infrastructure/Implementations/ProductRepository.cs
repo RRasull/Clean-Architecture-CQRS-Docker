@@ -1,5 +1,5 @@
-﻿using Clean_Architecture_CQRS_Docker.Domain.Entities;
-using Clean_Architecture_CQRS_Docker.Domain.Interfaces;
+﻿using Clean_Architecture_CQRS_Docker.Application.Interfaces;
+using Clean_Architecture_CQRS_Docker.Domain.Entities;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 
 namespace Clean_Architecture_CQRS_Docker.Infrastructure.Implementations;

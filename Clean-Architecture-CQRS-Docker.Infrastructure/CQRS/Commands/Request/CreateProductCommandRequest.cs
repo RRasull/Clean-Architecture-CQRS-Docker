@@ -1,7 +1,8 @@
-﻿using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Response;
+﻿
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Response;
 using MediatR;
 
-namespace Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Request;
+namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Request;
 
 public class CreateProductCommandRequest : IRequest<CreateProductCommandResponse>
 {

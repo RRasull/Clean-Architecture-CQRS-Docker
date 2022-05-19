@@ -1,10 +1,10 @@
-﻿using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Request;
-using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Response;
+﻿using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Request;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Response;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Clean_Architecture_CQRS_Docker.Application.CQRS.Handlers.CommandHandlers;
+namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.CommandHandlers;
 
 public class DeleteProductCommandHandler : IRequestHandler<DeleteProductCommandRequest, DeleteProductCommandResponse>
 {

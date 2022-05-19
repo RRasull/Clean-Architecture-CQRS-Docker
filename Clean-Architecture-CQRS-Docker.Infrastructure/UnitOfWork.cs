@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Clean_Architecture_CQRS_Docker.Domain;
-using Clean_Architecture_CQRS_Docker.Domain.Interfaces;
+﻿using Clean_Architecture_CQRS_Docker.Application.Interfaces;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using Clean_Architecture_CQRS_Docker.Infrastructure.Implementations;
 

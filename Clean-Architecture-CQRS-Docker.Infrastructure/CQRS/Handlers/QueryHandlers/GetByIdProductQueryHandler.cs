@@ -1,14 +1,9 @@
-﻿using Clean_Architecture_CQRS_Docker.Application.CQRS.Queries.Request;
-using Clean_Architecture_CQRS_Docker.Application.CQRS.Queries.Response;
+﻿using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Response;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Clean_Architecture_CQRS_Docker.Application.CQRS.Handlers.QueryHandlers
+namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.QueryHandlers
 {
     public class GetByIdProductQueryHandler : IRequestHandler<GetByIdProductQueryRequest, GetByIdProductQueryResponse>
     {

@@ -1,4 +1,4 @@
-﻿namespace Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Response;
+﻿namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Response;
 
 public class CreateProductCommandResponse
 {

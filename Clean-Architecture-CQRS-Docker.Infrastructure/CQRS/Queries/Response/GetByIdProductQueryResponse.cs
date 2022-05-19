@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Clean_Architecture_CQRS_Docker.Application.CQRS.Queries.Response
+namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Response
 {
-    public class GetAllProductQueryResponse
+    public class GetByIdProductQueryResponse
     {
         public int Id { get; set; }
         public string Name { get; set; }

@@ -1,5 +1,5 @@
 ﻿using System.Linq.Expressions;
-using Clean_Architecture_CQRS_Docker.Domain.Interfaces;
+using Clean_Architecture_CQRS_Docker.Application.Interfaces;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using Microsoft.EntityFrameworkCore;
 

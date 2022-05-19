@@ -1,7 +1,6 @@
-﻿
-using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Request;
-using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Response;
-using Clean_Architecture_CQRS_Docker.Application.CQRS.Queries.Request;
+﻿using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Request;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Response;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;

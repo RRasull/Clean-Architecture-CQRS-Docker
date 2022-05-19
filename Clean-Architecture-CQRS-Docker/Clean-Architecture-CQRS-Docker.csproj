@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Clean-Architecture-CQRS-Docker.Application\Clean-Architecture-CQRS-Docker.Application.csproj" />
+    <ProjectReference Include="..\Clean-Architecture-CQRS-Docker.Infrastructure\Clean-Architecture-CQRS-Docker.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
