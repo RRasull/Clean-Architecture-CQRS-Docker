@@ -1,4 +1,5 @@
-﻿using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Request;
+﻿
+using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Request;
 using Clean_Architecture_CQRS_Docker.Application.CQRS.Commands.Response;
 using Clean_Architecture_CQRS_Docker.Application.CQRS.Queries.Request;
 using MediatR;
@@ -28,8 +29,16 @@ namespace Clean_Architecture_CQRS_Docker.Controllers
         [HttpGet()]
         public async Task<IActionResult> GetAll()
         {
-            var query = new GetAllProductQueryRequest();
-            return Ok(await _mediatR.Send(query));
+            try
+            {
+                var query = new GetAllProductQueryRequest();
+                return Ok(await _mediatR.Send(query));
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
 
         [HttpPost]
