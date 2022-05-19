@@ -22,8 +22,16 @@ namespace Clean_Architecture_CQRS_Docker.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
-            var query = new GetByIdProductQueryRequest() { Id = id };
-            return Ok(await _mediatR.Send(query));
+            try
+            {
+                var query = new GetByIdProductQueryRequest() { Id = id };
+                return Ok(await _mediatR.Send(query));
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"{e.Message}");
+            }
+            
         }
 
         [HttpGet()]
@@ -34,9 +42,9 @@ namespace Clean_Architecture_CQRS_Docker.Controllers
                 var query = new GetAllProductQueryRequest();
                 return Ok(await _mediatR.Send(query));
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw new Exception($"{e.Message}");
             }
             
         }
@@ -44,15 +52,30 @@ namespace Clean_Architecture_CQRS_Docker.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(CreateProductCommandRequest requestModel)
         {
-            CreateProductCommandResponse response = await _mediatR.Send(requestModel);
-            return Ok(response);
+            try
+            {
+                CreateProductCommandResponse response = await _mediatR.Send(requestModel);
+                return Ok(response);
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"{e.Message}");
+            }
+            
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var query = new DeleteProductCommandRequest() { Id = id };
-            return Ok(await _mediatR.Send(query));
+            try
+            {
+                var query = new DeleteProductCommandRequest() { Id = id };
+                return Ok(await _mediatR.Send(query));
+            }
+            catch (Exception e)
+            {
+                throw new Exception($"{e.Message}");
+            }
         }
     }
 }
