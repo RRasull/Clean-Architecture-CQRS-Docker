@@ -7,7 +7,7 @@ namespace Clean_Architecture_CQRS_Docker.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         private AppDbContext _context { get; }
-        public IProductRepository _productRepository;
+        private IProductRepository _productRepository;
 
         public UnitOfWork(AppDbContext context)
         {

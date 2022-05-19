@@ -1,4 +1,5 @@
-﻿using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
+﻿using Clean_Architecture_CQRS_Docker.Application.Interfaces;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
 using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Response;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using MediatR;
@@ -8,17 +9,19 @@ namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.QueryHandl
 {
     public class GetAllProductQueryHandler : IRequestHandler<GetAllProductQueryRequest, List<GetAllProductQueryResponse>>
     {
-        private readonly AppDbContext _context;
+        // private readonly AppDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
 
-        public GetAllProductQueryHandler(AppDbContext context)
+        public GetAllProductQueryHandler(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<List<GetAllProductQueryResponse>> Handle(GetAllProductQueryRequest request, CancellationToken cancellationToken)
         {
-            var products = await _context.Products.ToListAsync();
+            // var products = await _context.Products.ToListAsync();
+            var products = await _unitOfWork.productRepository.GetAllAsync();
             List<GetAllProductQueryResponse> productsResponse = new List<GetAllProductQueryResponse>();
 
             foreach (var item in products)
