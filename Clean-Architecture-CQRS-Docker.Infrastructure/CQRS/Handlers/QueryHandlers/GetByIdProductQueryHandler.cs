@@ -1,4 +1,5 @@
-﻿using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
+﻿using Clean_Architecture_CQRS_Docker.Application.Interfaces;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
 using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Response;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using MediatR;
@@ -8,17 +9,18 @@ namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.QueryHandl
     public class GetByIdProductQueryHandler : IRequestHandler<GetByIdProductQueryRequest, GetByIdProductQueryResponse>
     {
 
-        private readonly AppDbContext _context;
+        // private readonly AppDbContext _context;
+        private readonly IUnitOfWork _unitOfWork;
 
 
-        public GetByIdProductQueryHandler(AppDbContext context)
+        public GetByIdProductQueryHandler(IUnitOfWork unitOfWork)
         {
-            _context = context;
+            _unitOfWork = unitOfWork;
         }
 
         public Task<GetByIdProductQueryResponse> Handle(GetByIdProductQueryRequest request, CancellationToken cancellationToken)
         {
-            var product = _context.Products.Where(x => x.Id == request.Id).FirstOrDefault();
+            var product = _unitOfWork.productRepository.Get(x=>x.Id==request.Id);
             if (product is null)
             {
                 throw new Exception("Product is Not Found");
