@@ -9,7 +9,7 @@ namespace Clean_Architecture_CQRS_Docker.Domain
 {
     public interface IUnitOfWork
     {
-        public IProductRepository ProductRepository { get; }
+        public IProductRepository productRepository { get; }
         
         Task SaveAsync();
     }
