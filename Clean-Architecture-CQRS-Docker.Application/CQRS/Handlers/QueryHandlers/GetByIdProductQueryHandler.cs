@@ -1,7 +1,6 @@
 ﻿using Clean_Architecture_CQRS_Docker.Application.Interfaces;
 using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Request;
 using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Queries.Response;
-using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using MediatR;
 
 namespace Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.QueryHandlers

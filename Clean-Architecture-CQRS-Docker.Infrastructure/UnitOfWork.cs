@@ -1,4 +1,5 @@
 ﻿using Clean_Architecture_CQRS_Docker.Application.Interfaces;
+using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Commands.Request;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using Clean_Architecture_CQRS_Docker.Infrastructure.Implementations;
 
@@ -7,6 +8,7 @@ namespace Clean_Architecture_CQRS_Docker.Infrastructure
     public class UnitOfWork : IUnitOfWork
     {
         private AppDbContext _context { get; }
+
         private IProductRepository _productRepository;
 
         public UnitOfWork(AppDbContext context)

@@ -3,12 +3,14 @@ using Clean_Architecture_CQRS_Docker.Infrastructure;
 using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.CommandHandlers;
 using Clean_Architecture_CQRS_Docker.Infrastructure.CQRS.Handlers.QueryHandlers;
 using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
+using Clean_Architecture_CQRS_Docker.Infrastructure.Implementations;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -21,13 +23,13 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("BloggingDatabase"));
 });
 
-builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
 builder.Services.AddTransient<GetAllProductQueryHandler>();
 builder.Services.AddTransient<GetByIdProductQueryHandler>();
 builder.Services.AddTransient<CreateProductCommandHandler>();
 builder.Services.AddTransient<DeleteProductCommandHandler>();
 
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
