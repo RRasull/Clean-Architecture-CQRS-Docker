@@ -6,6 +6,7 @@ using Clean_Architecture_CQRS_Docker.Infrastructure.DAL;
 using Clean_Architecture_CQRS_Docker.Infrastructure.Implementations;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
@@ -18,9 +19,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
 
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddEntityFrameworkNpgsql().AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("MyWebApiConection"));
 });
 
 builder.Services.AddTransient<GetAllProductQueryHandler>();
