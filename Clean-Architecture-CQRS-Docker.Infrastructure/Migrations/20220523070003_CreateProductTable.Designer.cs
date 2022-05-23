@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Clean_Architecture_CQRS_Docker.Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220518231314_CreateProductTable")]
+    [Migration("20220523070003_CreateProductTable")]
     partial class CreateProductTable
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
